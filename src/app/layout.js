@@ -1,7 +1,9 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+// import { Inter } from "next/font/google";
+// import "./globals.css"; 전체 화면 css라 주석 처리
 
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
+
+// const inter = Inter({ subsets: ["latin"] }); body의 class가 적용되어 있는 것을 삭제해서 주석 처리
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +13,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <h1><Link href="/">WEB</Link></h1>
+        <ol>
+          <li><Link href="/read/1">HTML</Link></li>
+          <li><Link href="/read/2">CSS</Link></li>
+          <li><Link href="/read/3">JS</Link></li>
+        </ol>
+        {children}
+        <ul>
+          <li><Link href="/create">Create</Link></li>
+          <li>Update</li>
+          <li><input type="button" value="delete" /></li>
+        </ul>
+        </body>
     </html>
   );
 }
