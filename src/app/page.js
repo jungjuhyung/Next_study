@@ -10,7 +10,7 @@ export default function Home() {
 
     {/* 위에서 임의로 import한 img01을 src={} 안에 넣어준다. */}
     {/* 해당 방법은 width와 height가 선택 사항이다. */}
-    <p><Image src={img01} /></p>
+    <p><Image src={img01}   /></p>
     <p><Image src={img01} width={100} height={100} /></p>
   </>
   );
