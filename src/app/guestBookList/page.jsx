@@ -1,5 +1,7 @@
 "use client"
+import { Grid } from "@mui/material";
 import axios from "axios";
+import Link from "next/link";
 import { useEffect, useState } from "react"
 
 export default function GuestBookList(props) {
@@ -25,6 +27,15 @@ export default function GuestBookList(props) {
     return(
         <div>
             <h2>GuestBookList</h2>
+            <Grid container>
+                {
+                    list.map((k)=>(
+                        <Grid item xs={3} key={k.idx}>
+                            <li>{k.name}, <Link href={"/detail/"+k.idx}>{k.subject}</Link>, {k.content}</li>
+                        </Grid>
+                    ))
+                }
+            </Grid>
         </div>
     )
 }

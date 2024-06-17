@@ -40,7 +40,7 @@ export default function ItemList(){
                 {
                     list.map((k)=>(
                             // 화면의 1/3 의미 => xs = {3}
-                            <Grid item xs={3} key={k.id}>
+                        <Grid item xs={3} key={k.id}>
                             <Link href={"/view/"+k.id}>
                             <img src={k.image_link} className="img_item" />
                             <strong>{k.name}</strong>
